@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TopSheetDialog</string>
+    <string name="my_top_sheet">My Top Sheet</string>
+    <string name="share">Share</string>
+</resources>
