@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ToolbarMenuItemWithAnimation</string>
+    <string name="notifications">Notifications</string>
+    <string name="max_count_plus">99+</string>
+</resources>
