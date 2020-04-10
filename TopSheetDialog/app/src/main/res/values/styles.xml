@@ -13,8 +13,11 @@
         <item name="android:backgroundDimEnabled">false</item>
     </style>
 
-    <style name="DialogAnimation">
+    <style name="SlideFromTopAnimation">
         <item name="android:windowEnterAnimation">@anim/slide_from_top</item>
+    </style>
+
+    <style name="SlideToTopAnimation">
         <item name="android:windowExitAnimation">@anim/slide_to_top</item>
     </style>
 

@@ -20,8 +20,12 @@ fun DialogFragment.setupWidthToMatchParent() {
     window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
 }
 
-fun DialogFragment.setupTopSlideAnimation() {
-    window?.attributes?.windowAnimations = R.style.DialogAnimation
+fun DialogFragment.setupSlideFromTopAnimation() {
+    window?.setWindowAnimations(R.style.SlideFromTopAnimation)
+}
+
+fun DialogFragment.setupSlideToTopAnimation() {
+    window?.setWindowAnimations(R.style.SlideToTopAnimation)
 }
 
 fun DialogFragment.getActivitySystemUiVisibility(): Int? =

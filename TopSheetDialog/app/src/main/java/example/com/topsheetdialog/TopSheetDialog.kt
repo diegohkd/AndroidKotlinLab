@@ -1,6 +1,7 @@
 package example.com.topsheetdialog
 
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,8 +34,11 @@ class TopSheetDialog : DialogFragment() {
     private fun setupView() {
         setupToShowAtTheTop()
         setupWidthToMatchParent()
-        setupTopSlideAnimation()
+        setupSlideFromTopAnimation()
         setupStatusBarColor()
+
+        // workaround to fix slide animation repeating when activity resumes
+        dialog?.setOnShowListener { Handler().post { setupSlideToTopAnimation() } }
     }
 
     private fun setupStatusBarColor() {
