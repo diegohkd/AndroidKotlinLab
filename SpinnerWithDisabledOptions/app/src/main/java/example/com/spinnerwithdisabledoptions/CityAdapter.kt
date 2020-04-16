@@ -5,7 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
-import androidx.core.content.ContextCompat
 
 class CityAdapter(
     var cities: List<City>,
@@ -24,9 +23,7 @@ class CityAdapter(
         (super.getDropDownView(position, convertView, parent) as TextView).apply {
             val city = cities[position]
             text = city.name
-            if (!city.isEnabled) {
-                setTextColor(ContextCompat.getColor(context, R.color.grey))
-            }
+            isEnabled = city.isEnabled
         }
 
     override fun isEnabled(position: Int): Boolean = cities[position].isEnabled
